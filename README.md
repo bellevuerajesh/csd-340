@@ -6,5 +6,6 @@ CSD 340 Web Development with HTML and CSS
 
 Contributors
 ------------
-. Adam Bailey
-. Rajesh Ayyappanpillai
+•	Prof. Adam Bailey
+•	Rajesh Ayyappanpillai
+
