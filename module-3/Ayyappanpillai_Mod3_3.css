@@ -1,0 +1,55 @@
+/* Container styling */
+#container {
+    margin: 50px 100px;
+}
+
+/* Heading styles */
+h1 {
+    text-align: center;
+}
+
+/* Side-by-side divs styling */
+#left, #right {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Last div styling */
+#bottom {
+    width: 100%;
+    margin-top: 60px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+/* h3 tag styling */
+h3 {
+    font-weight: 500;
+}
+
+/* List styling */
+ol {
+    font-weight: 300;
+    list-style-position: inside;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+ul {
+    font-weight: 300;
+    list-style: upper-roman inside;
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* Anchor tag styling */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
