@@ -1,0 +1,50 @@
+/* Apply a CSS grid with three columns for the 3 side-by-side divs */
+#container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgba(255, 0, 0, 0.8); /* Optional */
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10%;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: rgba(0, 255, 0, 0.8); /* Optional */
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(0, 0, 255, 0.8); /* Optional */
+}
+
+.back-link {
+    float: right;
+    margin-top: 60px;
+}
+
+.back-link a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8); /* Optional */
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
