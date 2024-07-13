@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment 10.3 - JavaScript - Part 2">
+    <meta name="author" content="Ayyppanpillai>
+    <meta name="keywords" content="HTML, CSS, JavaScript, Web Development">
+    <meta name="robots" content="index, follow">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function displayImage(imageFile) {
+            var largerImage = document.getElementById("mainImage");
+            var newNode = document.createElement("img");
+            newNode.id = "mainImage";
+            newNode.src = imageFile;
+            newNode.alt = "Large Image";
+            newNode.className = "mainImage";
+            newNode.style.width = "300px";
+            newNode.style.height = "200px";
+            largerImage.parentNode.replaceChild(newNode, largerImage);
+        }
+        
+        function imageClicked() {
+            alert("Image has been clicked!");
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .mainImage {
+            display: block;
+            margin: 0 auto;
+        }
+        .hoverImage {
+            margin: 20px;
+            cursor: pointer;
+        }
+        .hoverText {
+            margin: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <div>
+        <a href="#" onclick="displayImage('image1_large.jpg')" onmouseover="document.getElementById('image1').src='image1_hover.jpg';" onmouseout="document.getElementById('image1').src='image1.jpg';">
+            <img id="image1" class="hoverImage" src="image1.jpg" alt="Image 1">
+        </a>
+    </div>
+    <br>
+    <div onmouseover="this.style.color='red';" onmouseout="this.style.color='black';" onclick="imageClicked()" class="hoverText">
+        Run your mouse over the image to change.
+        <br>
+    </div>
+    <div>
+        <a href="#" onclick="displayImage('image2_large.jpg')" onmouseover="document.getElementById('image2').src='image2_hover.jpg';" onmouseout="document.getElementById('image2').src='image2.jpg';">
+            <img id="image2" class="hoverImage" src="image2.jpg" alt="Image 2">
+        </a>
+    </div>
+    <br>
+    <div onmouseover="this.style.color='red';" onmouseout="this.style.color='black';" onclick="imageClicked()" class="hoverText">
+        Run your mouse over the image to change.
+        <br>
+        Right-click and select View Source for more details.
+    </div>
+    <div>
+        <img id="mainImage" class="mainImage" src="placeholder.jpg" alt="Main Image">
+    </div>
+</body>
+</html>
