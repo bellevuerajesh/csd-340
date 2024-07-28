@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Ayyappanpillai_Mod12_2.css">
+    <style>
+        #container {
+            width: 80%;
+            margin: auto;
+        }
+        #left, #right {
+            width: 45%;
+            float: left;
+            margin: 2%;
+        }
+        #bottom {
+            clear: both;
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        <div id="left">
+            <h3>Top 10 Favorite Books</h3>
+            <button onclick="displayBooks('asc')">Top to Bottom</button>
+            <button onclick="displayBooks('desc')">Bottom to Top</button>
+            <ol id="bookList">
+                <!-- Books will be listed here by JavaScript -->
+            </ol>
+        </div>
+        <div id="right">
+            <h3>5 Things I have Learned Since the Course Started</h3>
+            <ul>
+                <li>It's ok not to be ok</li>
+                <li>Stay true to yourself</li>
+                <li>Love is strength</li>
+                <li>Gratitude is everything</li>
+                <li>Balance isn't real</li>
+            </ul>
+        </div>
+        <div id="bottom">
+            <a href="D:/bellevue/csd-340/module-12/index.html">Back to Landing Page</a>
+        </div>
+    </div>
+
+    <script>
+        const books = [
+            "Don Quixote",
+            "Alice's Adventures in Wonderland",
+            "The Adventures of Huckleberry Finn",
+            "The Adventures of Huckleberry Finn",
+            "The Great Gatsby",
+            "Pride and Prejudice",
+            "The Lord of the Rings",
+            "Harry Potter",
+            "War and Peace",
+            "In Search of Lost Time"
+        ];
+
+        function displayBooks(order) {
+            const bookList = document.getElementById('bookList');
+            bookList.innerHTML = ''; // Clear the list
+            let sortedBooks = books.slice();
+            if (order === 'asc') {
+                sortedBooks.sort();
+            } else {
+                sortedBooks.sort().reverse();
+            }
+            for (let i = 0; i < sortedBooks.length; i++) {
+                let li = document.createElement('li');
+                li.textContent = sortedBooks[i];
+                bookList.appendChild(li);
+            }
+        }
+
+        // Initial display of books in ascending order
+        displayBooks('asc');
+    </script>
+</body>
+</html>
